@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?><components xmlns:scr="http://www.osgi.org/xmlns/scr/v1.0.0">
+    <scr:component enabled="true" name="com.adobe.cq.impl.RegistrationServiceImpl">
+        <implementation class="com.adobe.cq.impl.RegistrationServiceImpl"/>
+        <service servicefactory="false">
+            <provide interface="com.adobe.cq.RegistrationService"/>
+        </service>
+        <property name="service.pid" value="com.adobe.cq.impl.RegistrationServiceImpl"/>
+    </scr:component>
+    <scr:component enabled="true" name="com.adobe.cq.RegistrationServlet">
+        <implementation class="com.adobe.cq.RegistrationServlet"/>
+        <service servicefactory="false">
+            <provide interface="javax.servlet.Servlet"/>
+        </service>
+        <property name="sling.servlet.paths" value="/bin/customservlet"/>
+        <property name="service.pid" value="com.adobe.cq.RegistrationServlet"/>
+    </scr:component>
+</components>
